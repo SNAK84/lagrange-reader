@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_align_justified">По ширине</string>
+    <string name="label_align_left">По левому краю</string>
+    <string name="label_font_accessible_dfa">AccessibleDFA</string>
+    <string name="label_font_custom">Свой шрифт</string>
+    <string name="label_font_open_dyslexic">OpenDyslexic</string>
+    <string name="label_font_publisher_default">Шрифт издателя</string>
+    <string name="label_font_system_monospace">Системный моноширинный</string>
+    <string name="label_font_system_sans_serif">Системный без засечек</string>
+    <string name="label_font_system_serif">Системный с засечками</string>
+    <string name="label_hyphenation_auto">Авто</string>
+    <string name="label_hyphenation_off">Выкл.</string>
+    <string name="label_hyphenation_on">Вкл.</string>
+    <string name="label_layout_continuous">Прокрутка</string>
+    <string name="label_layout_paginated">Перелистывание</string>
+    <string name="label_reading_direction_ltr">Слева направо</string>
+    <string name="label_reading_direction_rtl">Справа налево</string>
+    <string name="label_spread_auto">Авто</string>
+    <string name="label_spread_off">Выкл.</string>
+    <string name="label_tap_action_menu">Меню</string>
+    <string name="label_tap_action_next">Далее</string>
+    <string name="label_tap_action_previous">Назад</string>
+    <string name="label_tap_invert_both">По обеим осям</string>
+    <string name="label_tap_invert_horizontal">По горизонтали</string>
+    <string name="label_tap_invert_none">Без инверсии</string>
+    <string name="label_tap_invert_vertical">По вертикали</string>
+    <string name="label_tap_zone_edge">По краям</string>
+    <string name="label_tap_zone_equal_thirds">Три равные зоны</string>
+    <string name="label_tap_zone_kindle">Kindle</string>
+    <string name="label_tap_zone_l_shape">Г-образная зона</string>
+    <string name="label_tap_zone_menu_only">Только меню</string>
+    <string name="label_tap_zone_vertical_thirds">Три вертикальные зоны</string>
+    <string name="label_theme_amber_night">Янтарная ночь</string>
+    <string name="label_theme_arctic">Арктика</string>
+    <string name="label_theme_dark">Тёмная</string>
+    <string name="label_theme_dark_moss">Тёмный мох</string>
+    <string name="label_theme_darker_sepia">Тёмная сепия</string>
+    <string name="label_theme_fern">Папоротник</string>
+    <string name="label_theme_light">Светлая</string>
+    <string name="label_theme_midnight">Полночь</string>
+    <string name="label_theme_oled_black">Чёрная для OLED</string>
+    <string name="label_theme_sepia">Сепия</string>
+</resources>

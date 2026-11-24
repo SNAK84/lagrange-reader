@@ -45,6 +45,9 @@ android {
 
     buildTypes {
         getByName("debug") {
+            // Side-by-side localization QA build; release package is unchanged.
+            applicationIdSuffix = ".ru"
+            versionNameSuffix = "-ru-test"
             ndk {
                 abiFilters += "arm64-v8a"
             }

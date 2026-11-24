@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="comic_could_not_open">Readium не смог открыть этот комикс.</string>
+    <string name="comic_could_not_read">Readium не смог прочитать этот файл комикса.</string>
+    <string name="comic_error_file_unavailable">Файл комикса недоступен.</string>
+    <string name="comic_error_requires_cbz">Для работы Readium требуется архив изображений в формате CBZ.</string>
+    <string name="comic_no_readable_images">В этом комиксе нет изображений, которые можно открыть.</string>
+    <string name="comic_not_image_publication">Readium не распознал файл как издание с изображениями.</string>
+    <string name="comic_page_open_failed">Не удалось открыть страницу комикса.</string>
+    <string name="comic_page_url_invalid">Некорректный URL страницы комикса.</string>
+    <string name="comic_reader_source_unavailable">Источник данных для чтения комикса недоступен.</string>
+    <string name="comic_remote_not_image_publication">Readium не распознал комикс на сервере как издание с изображениями.</string>
+    <string name="comic_server_no_pages">Сервер не вернул ни одной страницы комикса.</string>
+    <string name="comic_some_page_url_invalid">У одной из страниц комикса некорректный URL.</string>
+    <string name="comic_spread_page">Страница %1$d</string>
+    <string name="comic_spread_pages">Страницы %1$d и %2$d</string>
+    <string name="pdf_could_not_open">Readium не удалось открыть эту PDF-публикацию.</string>
+    <string name="pdf_could_not_read">Readium не удалось прочитать этот PDF-файл.</string>
+    <string name="pdf_error_file_unavailable">PDF-файл недоступен.</string>
+    <string name="pdf_error_not_readable">Этот файл не содержит читаемого PDF-документа.</string>
+    <string name="pdf_no_app_for_link">Нет доступного приложения для открытия этой ссылки.</string>
+    <string name="pdf_no_readable_pages">В этом PDF-файле нет читаемых страниц.</string>
+    <string name="pdf_not_pdf">Система Readium не распознала этот файл как PDF-публикацию.</string>
+    <string name="pdf_reader_file_unavailable">Не удалось открыть PDF: файл недоступен.</string>
+    <string name="reader_error_with_back">%1$s\n\nНажмите «Назад», чтобы вернуться.</string>
+    <string name="reader_page_kind">Страница</string>
+    <string name="reader_page_number">Страница %1$d</string>
+    <string name="reader_preview_title">Предпросмотр \u00b7 %1$s</string>
+</resources>
