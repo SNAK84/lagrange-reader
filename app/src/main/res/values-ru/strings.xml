@@ -27,8 +27,8 @@
     <string name="setup_eyebrow_private_reader">Личная читалка</string>
     <string name="setup_tagline_your_library">Ваша библиотека на орбите.</string>
     <string name="setup_intro">Безопасно подключитесь к %1$s. Ваша библиотека остаётся на вашем сервере, а это приложение — ваше окно в мир чтения.</string>
-    <string name="setup_your_provider_server">ваш сервер %1$s</string>
-    <string name="setup_your_server">ваш сервер</string>
+    <string name="setup_your_provider_server">вашему серверу %1$s</string>
+    <string name="setup_your_server">вашему серверу</string>
     <string name="setup_server_name_label">Название сервера (необязательно)</string>
     <string name="setup_server_name_placeholder">Моя библиотека</string>
     <string name="setup_server_url_label">URL сервера</string>
