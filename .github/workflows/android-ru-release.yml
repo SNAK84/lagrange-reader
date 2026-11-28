@@ -59,13 +59,7 @@ jobs:
           packages: platform-tools
       - name: Install SDK
         run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
-      - name: Validate localization and run tests
-        run: |
-          chmod +x gradlew
-          python3 tools/validate_android_localizations.py
-          python3 -m unittest tools/test_validate_android_localizations.py tools/test_check_hardcoded_ui_strings.py
-          ./gradlew testDebugUnitTest lintDebug assembleDebugAndroidTest --no-daemon --console=plain
-      - name: Configure RU signing
+      - name: Validate and configure RU signing
         shell: bash
         env:
           KEYSTORE: ${{ secrets.RU_RELEASE_KEYSTORE_BASE64 }}
@@ -79,16 +73,79 @@ jobs:
           for name in KEYSTORE STORE_PASSWORD KEY_ALIAS KEY_PASSWORD EXPECTED_SIGNER; do
             [[ -n "${!name}" ]] || { echo "Missing configuration: $name" >&2; exit 1; }
           done
+          # TXT files may acquire a trailing CR/LF when copied into GitHub.
+          for name in STORE_PASSWORD KEY_ALIAS KEY_PASSWORD EXPECTED_SIGNER; do
+            value="${!name}"
+            while [[ "$value" == *$'\r' || "$value" == *$'\n' ]]; do
+              value="${value%?}"
+            done
+            printf -v "$name" '%s' "$value"
+            export "$name"
+          done
           expected="$(printf '%s' "$EXPECTED_SIGNER" | tr -d ':' | tr '[:upper:]' '[:lower:]')"
-          [[ "$expected" =~ ^[0-9a-f]{64}$ ]]
-          printf '%s' "$KEYSTORE" | base64 --decode > release-key.jks
-          {
-            printf 'storeFile=release-key.jks\n'
-            printf 'storePassword=%s\n' "$STORE_PASSWORD"
-            printf 'keyAlias=%s\n' "$KEY_ALIAS"
-            printf 'keyPassword=%s\n' "$KEY_PASSWORD"
-          } > keystore.properties
+          [[ "$expected" =~ ^[0-9a-f]{64}$ ]] || { echo "::error::Invalid RU_RELEASE_SIGNER_SHA256"; exit 1; }
+          if ! printf '%s' "$KEYSTORE" | tr -d '[:space:]' | base64 --decode > release-key.jks; then
+            echo "::error::Invalid RU_RELEASE_KEYSTORE_BASE64"
+            exit 1
+          fi
+          if ! keytool -list -keystore release-key.jks -storepass:env STORE_PASSWORD >/dev/null 2>&1; then
+            echo "::error::Cannot open keystore: check RU_RELEASE_KEYSTORE_BASE64 and RU_RELEASE_STORE_PASSWORD"
+            exit 1
+          fi
+          if ! actual="$(keytool -exportcert -keystore release-key.jks -storepass:env STORE_PASSWORD -alias "$KEY_ALIAS" 2>/dev/null | sha256sum | cut -d ' ' -f1)"; then
+            echo "::error::Cannot find certificate: check RU_RELEASE_KEY_ALIAS"
+            exit 1
+          fi
+          [[ "$actual" == "$expected" ]] || { echo "::error::Keystore certificate does not match RU_RELEASE_SIGNER_SHA256"; exit 1; }
+          csr="$(mktemp)"
+          if ! keytool -certreq -keystore release-key.jks -storepass:env STORE_PASSWORD -keypass:env KEY_PASSWORD -alias "$KEY_ALIAS" -file "$csr" >/dev/null 2>&1; then
+            rm -f "$csr"
+            echo "::error::Cannot open private key: check RU_RELEASE_KEY_PASSWORD"
+            exit 1
+          fi
+          rm -f "$csr"
+          # Encode Java Properties safely, including literal backslashes and spaces.
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          def escape(value):
+              result = []
+              for char in value:
+                  if char in "\\ =:#!":
+                      result.append("\\" + char)
+                  elif char == "\t":
+                      result.append("\\t")
+                  elif char == "\r":
+                      result.append("\\r")
+                  elif char == "\n":
+                      result.append("\\n")
+                  elif 32 <= ord(char) <= 126:
+                      result.append(char)
+                  else:
+                      units = char.encode("utf-16-be")
+                      result.extend("\\u" + units[i:i+2].hex() for i in range(0, len(units), 2))
+              return "".join(result)
+
+          values = {
+              "storeFile": "release-key.jks",
+              "storePassword": os.environ["STORE_PASSWORD"],
+              "keyAlias": os.environ["KEY_ALIAS"],
+              "keyPassword": os.environ["KEY_PASSWORD"],
+          }
+          Path("keystore.properties").write_text(
+              "".join(key + "=" + escape(value) + "\n" for key, value in values.items()),
+              encoding="ascii",
+          )
+          PY
           printf '%s\n' "$expected" > app/src/main/assets/release-signer-sha256.txt
+          echo "RU signing preflight passed: keystore, private key and certificate verified."
+      - name: Validate localization and run tests
+        run: |
+          chmod +x gradlew
+          python3 tools/validate_android_localizations.py
+          python3 -m unittest tools/test_validate_android_localizations.py tools/test_check_hardcoded_ui_strings.py
+          ./gradlew testDebugUnitTest lintDebug assembleDebugAndroidTest --no-daemon --console=plain
       - name: Build and sign APKs
         run: ./gradlew assembleRelease -PreleaseAbiSplits --no-daemon --console=plain
       - name: Verify package, version and signer on every APK
