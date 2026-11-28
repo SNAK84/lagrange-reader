@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="auto_audiobook_count">
+        <item quantity="one">%1$d аудиокнига</item>
+        <item quantity="few">%1$d аудиокниги</item>
+        <item quantity="many">%1$d аудиокниг</item>
+        <item quantity="other">%1$d аудиокниги</item>
+    </plurals>
+    <string name="auto_chapter_fallback">Глава %1$d</string>
+    <string name="auto_chapter_starts_at">Начало: %1$s</string>
+    <plurals name="auto_chapters_count">
+        <item quantity="one">%1$d глава</item>
+        <item quantity="few">%1$d главы</item>
+        <item quantity="many">%1$d глав</item>
+        <item quantity="other">%1$d главы</item>
+    </plurals>
+    <string name="auto_chapters_title">Главы · %1$s</string>
+    <string name="auto_group_continue_listening">Продолжить прослушивание</string>
+    <string name="auto_group_in_progress">В процессе</string>
+    <string name="auto_group_now_playing">Сейчас играет</string>
+    <string name="auto_group_suggested">Рекомендуем</string>
+    <string name="auto_library_fallback">Библиотека</string>
+    <string name="auto_next_chapter">Следующая глава</string>
+    <string name="auto_playback_speed">Скорость воспроизведения (%1$s)</string>
+    <string name="auto_previous_chapter">Предыдущая глава</string>
+    <plurals name="auto_series_count">
+        <item quantity="one">%1$d серия аудиокниг</item>
+        <item quantity="few">%1$d серии аудиокниг</item>
+        <item quantity="many">%1$d серий аудиокниг</item>
+        <item quantity="other">%1$d серии аудиокниг</item>
+    </plurals>
+    <string name="auto_series_title">Серии</string>
+    <string name="auto_settings_controls_eyebrow">Управление в Android Auto</string>
+    <string name="auto_settings_dashboard_summary">Настройте кнопки скорости воспроизведения, интервалы перемотки и действия кнопок на руле.</string>
+    <string name="auto_settings_dashboard_title">Управление на панели</string>
+    <string name="auto_settings_scale_progress_summary">При скорости выше 1,0x пересчитываются оставшееся время и положение на полосе прогресса.</string>
+    <string name="auto_settings_scale_progress_title">Учитывать скорость при расчёте прогресса</string>
+    <string name="auto_settings_steering_summary">Выберите, что делают кнопки перемотки в автомобиле: переключают главы или перематывают на заданное время.</string>
+    <string name="auto_settings_steering_title">Кнопки на руле &amp; перемотка</string>
+    <string name="auto_settings_vehicle_skip_summary">Если включено, кнопки «Далее» и «Назад» на руле переключают главы вместо перемотки на 30 секунд назад или вперёд.</string>
+    <string name="auto_settings_vehicle_skip_title">Переключать главы кнопками перемотки автомобиля</string>
+    <string name="auto_subtitle_audiobook">Аудиокнига</string>
+    <string name="auto_subtitle_downloaded">Скачано</string>
+    <string name="auto_subtitle_progress_listened">Прослушано: %1$d%%</string>
+    <string name="auto_tab_downloaded_subtitle">Аудиокниги на устройстве для прослушивания офлайн</string>
+    <string name="auto_tab_downloaded_title">Скачанное</string>
+    <string name="auto_tab_home_subtitle">Текущие и начатые аудиокниги</string>
+    <string name="auto_tab_home_title">Главная</string>
+    <string name="auto_tab_libraries_subtitle">Просмотр по библиотекам и сериям</string>
+    <string name="auto_tab_libraries_title">Библиотеки</string>
+    <string name="auto_tab_recent_subtitle">Недавно добавленные и обновлённые аудиокниги</string>
+    <string name="auto_tab_recent_title">Недавнее</string>
+</resources>

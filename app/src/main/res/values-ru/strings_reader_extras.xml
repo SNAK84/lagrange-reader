@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="extras_apply">Применить</string>
+    <string name="extras_book_language_auto_from_book">Авто · %1$s (из книги)</string>
+    <string name="extras_book_language_auto_from_device">Авто · %1$s (язык устройства, в книге не указан)</string>
+    <string name="extras_book_language_auto_unknown">Авто · неизвестно (в книге не указан)</string>
+    <string name="extras_close_image_viewer">Закрыть изображение</string>
+    <string name="extras_close_narration">Закрыть озвучку</string>
+    <string name="extras_comic_default_title">комикс</string>
+    <string name="extras_comic_export_title">%1$s - Страница %2$d</string>
+    <string name="extras_could_not_read_image">Не удалось прочитать изображение</string>
+    <string name="extras_custom_font_choose_type">Выберите файл шрифта .ttf или .otf.</string>
+    <string name="extras_custom_font_empty">Выбранный файл шрифта пуст.</string>
+    <string name="extras_custom_font_invalid">Выбранный файл не является допустимым шрифтом TrueType или OpenType.</string>
+    <string name="extras_custom_font_open_failed">Не удалось открыть выбранный файл шрифта.</string>
+    <string name="extras_custom_font_prepare_failed">Не удалось подготовить EPUB к чтению с выбранным шрифтом.</string>
+    <string name="extras_custom_font_too_large">Выбранный файл шрифта слишком большой (не более 20 МБ).</string>
+    <string name="extras_download_page">Скачать страницу</string>
+    <string name="extras_epub_narration">Озвучка EPUB</string>
+    <string name="extras_export_failed">Не удалось сохранить изображение</string>
+    <string name="extras_export_saved">Изображение сохранено в Downloads/Lagrange Reader</string>
+    <string name="extras_image_gesture_hint">Сведите или разведите пальцы либо коснитесь дважды, чтобы изменить масштаб. Чтобы закрыть изображение, нажмите «Назад» или коснитесь за его пределами. Нажмите и удерживайте изображение, чтобы открыть параметры загрузки.</string>
+    <string name="extras_image_page_cd">Изображение страницы %1$d.</string>
+    <string name="extras_image_tap_controls_hint">Коснитесь один раз, чтобы показать или скрыть элементы управления.</string>
+    <string name="extras_notification_play_pause_cd">Включить или приостановить озвучку</string>
+    <string name="extras_page_number">Страница %1$d</string>
+    <string name="extras_readalong_close_cd">Закрыть чтение с озвучкой</string>
+    <string name="extras_readalong_media_title">Чтение с озвучкой · %1$s</string>
+    <string name="extras_readalong_next_sentence_cd">Следующее предложение озвучки</string>
+    <string name="extras_readalong_pause_cd">Приостановить озвучку</string>
+    <string name="extras_readalong_play_cd">Включить озвучку</string>
+    <string name="extras_readalong_playback_channel">Воспроизведение озвучки</string>
+    <string name="extras_readalong_playback_channel_description">Показывает предложение из EPUB, которое сейчас озвучивается.</string>
+    <string name="extras_readalong_previous_sentence_cd">Предыдущее предложение озвучки</string>
+    <string name="extras_readalong_settings">Настройки озвучки</string>
+    <string name="extras_readalong_speed">Скорость</string>
+    <string name="extras_readalong_speed_description">Скорость озвучки</string>
+    <string name="extras_readalong_title">Чтение с озвучкой</string>
+    <string name="extras_storage_permission_required">Чтобы сохранить страницу, разрешите доступ к хранилищу</string>
+</resources>

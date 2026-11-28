@@ -12,6 +12,14 @@ class BookOrbitAcceptLanguageTest {
     }
 
     @Test
+    fun `Russian follows explicit or matching system locale`() {
+        assertEquals("ru", bookOrbitAcceptLanguage(AppLocale.RUSSIAN, Locale.US))
+        assertEquals("ru", bookOrbitAcceptLanguage(AppLocale.SYSTEM, Locale.forLanguageTag("ru-RU")))
+        assertEquals("ru", bookOrbitAcceptLanguage("ru-RU", Locale.US))
+        assertEquals("ru", AppLocale.languageFor(AppLocale.RUSSIAN).localeOverride)
+    }
+
+    @Test
     fun `system Simplified Chinese matches the supported Chinese app locale`() {
         assertEquals(
             "zh-CN",

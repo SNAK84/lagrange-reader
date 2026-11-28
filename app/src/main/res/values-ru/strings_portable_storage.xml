@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="browse_downloaded_to_sd_card">Скачано в выбранную папку</string>
+    <string name="settings_auto_download_review_location">Папка загрузок: %1$s</string>
+    <string name="settings_download_location_available">Свободно: %1$s</string>
+    <string name="settings_download_location_available_unknown">Папка доступна, но поставщик хранилища не сообщает объём свободного места</string>
+    <string name="settings_download_location_choose_folder">Выбрать папку</string>
+    <string name="settings_download_location_existing_stay">Скачанные файлы останутся на прежнем месте.</string>
+    <string name="settings_download_location_internal">Внутреннее хранилище приложения</string>
+    <string name="settings_download_location_managed_subfolder">Новые загрузки сохраняются во вложенной папке Lagrange Reader. При выборе папки Android запросит доступ.</string>
+    <string name="settings_download_location_new_downloads">Папка для новых загрузок: %1$s.</string>
+    <string name="settings_download_location_new_downloads_internal">Новые загрузки будут сохраняться во внутреннем хранилище приложения.</string>
+    <string name="settings_download_location_permission_revoked">Доступ отозван - выберите папку заново</string>
+    <string name="settings_download_location_select_failed">Не удалось использовать выбранную папку.</string>
+    <string name="settings_download_location_selected_folder">Выбранная папка</string>
+    <string name="settings_download_location_title">Папка загрузок</string>
+    <string name="settings_download_location_unavailable">Выбранная папка недоступна</string>
+    <string name="settings_download_location_use_internal">Использовать внутреннее хранилище</string>
+</resources>

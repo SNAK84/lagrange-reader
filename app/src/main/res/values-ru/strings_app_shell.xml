@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="release_download_apk_verification_failed">Lagrange удалил скачанный APK: его пакет, версия или сертификат подписи не совпадали с ожидаемыми. Файл не был передан Android для установки. Откройте официальную страницу выпуска и проверьте доступный файл.</string>
+    <string name="release_download_browser_unavailable">Нет браузера, чтобы открыть страницу выпуска на GitHub.</string>
+    <string name="release_download_button">Скачать APK</string>
+    <string name="release_download_failed">Не удалось скачать обновление.</string>
+    <string name="release_download_in_progress">Загрузка обновления…</string>
+    <string name="release_download_open_release">Открыть официальную страницу выпуска</string>
+    <string name="release_download_permission_required">Разрешите Lagrange устанавливать приложения из неизвестных источников. Затем вернитесь и снова нажмите «Скачать APK».</string>
+    <string name="release_download_progress">Загрузка обновления: %1$d%%</string>
+    <string name="release_download_signer_mismatch">Lagrange заблокировал обновление: сертификат установленного приложения отличается от закреплённого сертификата выпуска. Чтобы перейти на официальный выпуск, сохраните важные данные, скачайте APK со страницы выпуска, удалите эту копию приложения и установите скачанный APK. При удалении локальные данные Lagrange будут потеряны.</string>
+    <string name="release_download_signer_unknown">Lagrange не смог проверить сертификат подписи этой копии, поэтому обновление через приложение заблокировано. Сохраните важные данные и откройте официальную страницу выпуска. Если Android откажет в установке, может потребоваться удалить эту копию. При удалении локальные данные будут потеряны.</string>
+    <string name="release_download_unavailable">К этому выпуску не приложен совместимый APK.</string>
+    <string name="shell_audiobook_failed">Не удалось подготовить аудиокнигу. Операция безопасно прервана.</string>
+    <string name="shell_audiobook_preparing">Подготовка аудиокниги…</string>
+    <string name="shell_audiobook_timeout">Подготовка аудиокниги заняла слишком много времени. Попробуйте открыть её снова.</string>
+    <string name="shell_audiobook_unavailable">Не удалось подготовить аудиокнигу к воспроизведению.</string>
+    <string name="shell_back">Назад</string>
+    <string name="shell_books">Книги</string>
+    <string name="shell_connected_server">Подключённый сервер</string>
+    <string name="shell_delete_local">Удалить копию</string>
+    <string name="shell_download">Скачать</string>
+    <string name="shell_downloading">Загрузка</string>
+    <string name="shell_libraries_title">Библиотеки</string>
+    <string name="shell_loading_books">Загрузка книг...</string>
+    <string name="shell_loading_libraries">Загрузка библиотек...</string>
+    <string name="shell_loading_library">Загрузка библиотеки…</string>
+    <string name="shell_no_books_in_library">В этой библиотеке нет книг.</string>
+    <string name="shell_no_libraries">Библиотеки не найдены.</string>
+    <string name="shell_open_local">Открыть копию</string>
+    <string name="shell_pending_sync_queue">В очереди на синхронизацию: %1$d</string>
+    <string name="shell_read_or_listen">Читать / слушать</string>
+    <string name="shell_reader_comic_needs_cbz">Чтобы Readium открыл комикс, файл нужно преобразовать в CBZ. Снова подключитесь к настроенному серверу, чтобы подготовить файл.</string>
+    <string name="shell_reader_epub_unpreparable">Не удалось подготовить EPUB к чтению.</string>
+    <string name="shell_reader_format_unsupported">Этот формат файла не поддерживается.</string>
+    <string name="shell_reader_pdf_unpreparable">Не удалось подготовить этот PDF для Readium.</string>
+    <string name="shell_refresh">Обновить</string>
+    <string name="shell_select_library">Выберите библиотеку</string>
+    <string name="shell_sign_out">Выйти</string>
+    <string name="shell_status_downloaded">скачано</string>
+    <string name="shell_status_not_available_offline">недоступно офлайн</string>
+    <string name="shell_tagline">Читалка Lagrange</string>
+    <string name="shell_unavailable_offline">Недоступно офлайн</string>
+    <string name="shell_update_available">Доступна версия %1$s</string>
+    <string name="shell_update_ignore">Пропустить</string>
+    <string name="shell_update_ready">Версия %1$s готова к скачиванию.</string>
+</resources>
