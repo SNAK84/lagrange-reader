@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notif_audio_open_cancelled">Открытие аудиокниги отменено.</string>
+    <string name="notif_audiobook_bind_failed">Не удалось подключиться к службе воспроизведения аудиокниг.</string>
+    <string name="notif_audiobook_bind_start_failed">Не удалось начать подключение к службе воспроизведения аудиокниг.</string>
+    <string name="notif_audiobook_connect_timeout">Служба воспроизведения аудиокниг не ответила вовремя.</string>
+    <string name="notif_audiobook_file_unavailable">Скачанный файл аудиокниги недоступен.</string>
+    <string name="notif_audiobook_format_unsupported">Этот формат аудиокниг пока не поддерживается.</string>
+    <string name="notif_audiobook_initialize_failed">Readium не удалось подготовить воспроизведение аудиокниги.</string>
+    <string name="notif_audiobook_media3_open_failed">Media3 не удалось открыть поток аудиокниги с настроенного сервера (%1$s).</string>
+    <string name="notif_audiobook_no_local_file">На устройстве нет скачанного файла аудиокниги, который можно воспроизвести.</string>
+    <string name="notif_audiobook_open_failed">Readium не удалось открыть эту аудиокнигу.</string>
+    <string name="notif_audiobook_prepare_failed">Readium не удалось подготовить эту аудиокнигу к воспроизведению.</string>
+    <string name="notif_audiobook_prepare_timeout">Подготовка аудиокниги заняла слишком много времени.</string>
+    <string name="notif_audiobook_read_failed">Readium не удалось прочитать этот файл аудиокниги.</string>
+    <string name="notif_audiobook_resume_failed">Не удалось продолжить воспроизведение аудиокниги.</string>
+    <string name="notif_audiobook_seek_back">На 10 секунд назад</string>
+    <string name="notif_audiobook_seek_forward">На 30 секунд вперёд</string>
+    <string name="notif_audiobook_start_failed">Не удалось начать воспроизведение аудиокниги.</string>
+    <string name="notif_audiobook_unrecognized">Readium не распознал файл как аудиокнигу.</string>
+    <string name="notif_channel_downloads_description">Показывает прогресс скачивания книги.</string>
+    <string name="notif_channel_downloads_name">Загрузки книг</string>
+    <string name="notif_connecting">Подключение…</string>
+    <string name="notif_cover_save_failed">Не удалось сохранить обложку</string>
+    <string name="notif_cover_saved">Обложка сохранена в Downloads/Lagrange Reader</string>
+    <string name="notif_cover_unavailable">Изображение обложки недоступно</string>
+    <string name="notif_download_attempts_exhausted">Загрузка остановлена после пяти попыток.</string>
+    <string name="notif_download_title">Загрузка «%1$s»</string>
+    <string name="notif_downloading">Загрузка</string>
+    <string name="notif_summary_text">Идёт загрузка книг</string>
+    <string name="notif_summary_title">Загружается книг: %1$d</string>
+</resources>

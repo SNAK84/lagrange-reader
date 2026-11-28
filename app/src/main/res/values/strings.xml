@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lagrange</string>
+    <string name="app_name">Lagrange Reader RU</string>
     <string name="settings_category_permissions">Permissions</string>
     <string name="settings_category_permissions_summary">Android permissions used by Lagrange</string>
     <string name="settings_permissions_summary">Android permissions used by Lagrange</string>
@@ -105,6 +105,7 @@
     <string name="language_system">System default</string>
     <string name="language_english">English</string>
     <string name="language_chinese">简体中文</string>
+    <string name="language_russian">Русский</string>
 
     <!-- Content descriptions -->
     <string name="cd_lagrange_logo">Lagrange logo</string>

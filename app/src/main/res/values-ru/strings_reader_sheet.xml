@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sheet_apply_to_all_libraries">Применить ко всем библиотекам</string>
+    <string name="sheet_apply_to_all_libraries_applied">Настройки чтения применены ко всем библиотекам</string>
+    <string name="sheet_apply_to_all_libraries_confirm">Применить</string>
+    <string name="sheet_apply_to_all_libraries_confirm_message">Настройки чтения во всех библиотеках будут заменены настройками текущей книги. Позже их можно будет изменить отдельно для каждой библиотеки.</string>
+    <string name="sheet_apply_to_all_libraries_confirm_title">Применить ко всем библиотекам?</string>
+    <string name="sheet_apply_to_all_libraries_summary">Скопировать эти настройки чтения во все библиотеки на сервере.</string>
+    <string name="sheet_book_language_auto">Авто (язык книги или устройства)</string>
+    <string name="sheet_book_language_description">Язык для озвучки и переносов слов</string>
+    <string name="sheet_book_language_title">Язык книги</string>
+    <string name="sheet_book_language_with_value">Язык книги: %1$s</string>
+    <string name="sheet_close_book">Закрыть книгу</string>
+    <string name="sheet_comic_page_of">Страница %1$d из %2$d</string>
+    <string name="sheet_continue_reading">Продолжить чтение</string>
+    <string name="sheet_custom_background">Цвет фона</string>
+    <string name="sheet_custom_background_apply">Применить</string>
+    <string name="sheet_custom_background_brightness">Яркость</string>
+    <string name="sheet_custom_background_custom">Свой</string>
+    <string name="sheet_custom_background_default">По умолчанию</string>
+    <string name="sheet_custom_background_dialog_title">Свой цвет фона</string>
+    <string name="sheet_custom_background_hex">Код цвета (#RRGGBB)</string>
+    <string name="sheet_custom_background_invalid">Введите код цвета из 6 шестнадцатеричных знаков, например #A1B2C3.</string>
+    <string name="sheet_custom_background_preview">Предпросмотр</string>
+    <string name="sheet_custom_background_reset">Восстановить по умолчанию</string>
+    <string name="sheet_custom_background_summary">Свой цвет фона страниц EPUB (RGB)</string>
+    <string name="sheet_custom_background_wheel_description">Цветовой круг для выбора оттенка и насыщенности</string>
+    <string name="sheet_reader_options">Настройки читалки</string>
+    <string name="sheet_reader_theme_options">Меню &amp; настройки</string>
+    <string name="sheet_reader_theme_options_summary">Цвета меню и панели настроек</string>
+    <string name="sheet_reading_background">Фон чтения</string>
+    <string name="sheet_reading_background_summary">Фон страницы и области чтения</string>
+    <string name="sheet_reading_configuration">Параметры чтения</string>
+    <string name="sheet_text_color">Цвет текста</string>
+    <string name="sheet_text_color_custom">Свой</string>
+    <string name="sheet_text_color_custom_summary">Выберите свой цвет текста EPUB (RGB)</string>
+    <string name="sheet_text_color_default">По умолчанию</string>
+    <string name="sheet_text_color_dialog_title">Свой цвет текста</string>
+    <string name="sheet_text_color_preview">Предпросмотр</string>
+    <string name="sheet_text_color_sample">Аа Образец текста</string>
+    <string name="sheet_text_color_summary">Подбирать цвет к фону чтения или использовать свой</string>
+    <string name="sheet_this_book">Эта книга</string>
+</resources>

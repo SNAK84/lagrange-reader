@@ -30,12 +30,14 @@ internal object AppLocale {
     const val SYSTEM = "system"
     const val ENGLISH = "en"
     const val CHINESE_SIMPLIFIED = "zh-CN"
+    const val RUSSIAN = "ru"
 
     /** Ordered list shown in Options → General → Language. */
     val languages: List<AppLanguage> = listOf(
         AppLanguage(SYSTEM, R.string.language_system, null),
         AppLanguage(ENGLISH, R.string.language_english, "en"),
-        AppLanguage(CHINESE_SIMPLIFIED, R.string.language_chinese, "zh-CN")
+        AppLanguage(CHINESE_SIMPLIFIED, R.string.language_chinese, "zh-CN"),
+        AppLanguage(RUSSIAN, R.string.language_russian, "ru")
     )
 
     val choices: List<String> = languages.map(AppLanguage::tag)

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chrome_chapter_kind">Глава</string>
+    <string name="chrome_chapter_position">Глава %1$d/%2$d</string>
+    <string name="chrome_chapters">Главы</string>
+    <string name="chrome_close_book">Закрыть книгу</string>
+    <string name="chrome_current">Сейчас открыто</string>
+    <string name="chrome_dismiss_options">Закрыть настройки читалки и продолжить чтение</string>
+    <string name="chrome_dismiss_scrim">Скрыть элементы управления и продолжить чтение</string>
+    <string name="chrome_exit">Выйти</string>
+    <string name="chrome_footer_comic_page_of">Страница комикса %1$d из %2$d</string>
+    <string name="chrome_footer_comic_pages_of">Страницы комикса %1$d и %2$d из %3$d</string>
+    <string name="chrome_footer_page_of">Страница %1$d из %2$d</string>
+    <string name="chrome_footer_pages_of">Страницы %1$d–%2$d из %3$d</string>
+    <string name="chrome_jump_bar">Полоса перехода: %1$s</string>
+    <string name="chrome_listen">Слушать</string>
+    <string name="chrome_listen_narration">Слушать озвучку</string>
+    <string name="chrome_next_position">Далее (%1$s)</string>
+    <string name="chrome_page_load_failed">Не удалось загрузить страницу %1$d</string>
+    <string name="chrome_pages">Страницы</string>
+    <string name="chrome_position_state">%1$d из %2$d</string>
+    <string name="chrome_position_with_number">%1$s %2$d</string>
+    <string name="chrome_previous_position">Назад (%1$s)</string>
+    <string name="chrome_progress_a11y_book_pages">страница книги %1$d из %2$d</string>
+    <string name="chrome_progress_a11y_book_pages_calculating">идёт подсчёт страниц книги</string>
+    <string name="chrome_progress_a11y_summary">Процент прочтения: %1$d; глава %2$d из %3$d; страница главы %4$d из %5$d; %6$s</string>
+    <string name="chrome_progress_book_pages">По книге: %1$d/%2$d</string>
+    <string name="chrome_progress_book_pages_calculating">Подсчёт страниц книги…</string>
+    <string name="chrome_progress_summary">%1$d%% · глава %2$d/%3$d · страница %4$d/%5$d · %6$s</string>
+    <string name="chrome_progression_jump_bar">Полоса перехода по прогрессу: %1$s</string>
+    <string name="chrome_reader_settings">Настройки читалки</string>
+    <string name="chrome_select_position">Выбрать: %1$s %2$d, %3$s</string>
+    <string name="preview_banner_content_description">Предпросмотр. Нажмите, чтобы сохранять прогресс чтения.</string>
+    <string name="preview_banner_label">Предпросмотр · нажмите, чтобы сохранять прогресс чтения</string>
+    <string name="preview_dialog_text">Вы перейдёте в режим чтения и останетесь на этой странице. С этого момента прогресс чтения будет сохраняться.</string>
+    <string name="preview_leave_title">Выйти из предпросмотра?</string>
+    <string name="preview_switch_to_reading">Перейти в режим чтения</string>
+    <string name="tutorial_content_description">Подсказка о зонах касания в читалке</string>
+    <string name="tutorial_swipe_hint">Смахните вверх или вниз для прокрутки</string>
+    <string name="tutorial_tap_region_description">Зона касания: %1$s</string>
+</resources>

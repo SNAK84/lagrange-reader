@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chrome_progress_a11y_continuous_summary">Процент прочтения: %1$d; глава %2$d из %3$d; %4$s</string>
+    <string name="chrome_progress_a11y_continuous_summary_without_overall">Процент прочтения: %1$d; глава %2$d из %3$d</string>
+    <string name="chrome_progress_a11y_summary_without_overall">Процент прочтения: %1$d; глава %2$d из %3$d; страница главы %4$d из %5$d</string>
+    <string name="chrome_progress_continuous_summary">%1$d%% · глава %2$d/%3$d · %4$s</string>
+    <string name="chrome_progress_continuous_summary_without_overall">%1$d%% · глава %2$d/%3$d</string>
+    <string name="chrome_progress_summary_without_overall">%1$d%% · глава %2$d/%3$d · страница %4$d/%5$d</string>
+    <string name="epub_continuous_chapter_loading">Загрузка следующей главы</string>
+    <string name="epub_open_error_file_changed">Файл EPUB изменился во время открытия. Повторите попытку.</string>
+    <string name="epub_progress_save_failed">Не удалось сохранить последнюю позицию чтения. Попробуйте закрыть читалку ещё раз.</string>
+    <string name="epub_reader_preparing">Подготовка читалки EPUB…</string>
+    <string name="epub_renderer_start_failed">Не удалось запустить отображение EPUB. Закройте и снова откройте книгу. Если это повторится, перезапустите устройство.</string>
+</resources>

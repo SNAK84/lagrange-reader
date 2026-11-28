@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="polish_epub_not_local">Выбранного EPUB нет на устройстве.</string>
+    <string name="polish_selected_file_not_epub">Выбранный файл не в формате EPUB.</string>
+    <string name="polish_unknown_book">Неизвестная книга</string>
+</resources>

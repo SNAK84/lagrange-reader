@@ -105,6 +105,7 @@
     <string name="language_system">跟随系统</string>
     <string name="language_english">English</string>
     <string name="language_chinese">简体中文</string>
+    <string name="language_russian">Русский</string>
 
     <!-- 无障碍描述 -->
     <string name="cd_lagrange_logo">Lagrange 标志</string>
