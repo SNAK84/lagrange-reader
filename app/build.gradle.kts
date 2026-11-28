@@ -23,13 +23,13 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.vangeaux.lagrange"
+        applicationId = "com.vangeaux.lagrange.ru"
         minSdk = 26
         targetSdk = 36
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         // Release marker: update versionCode and versionName together for every distributed build.
-        versionCode = 32
-        versionName = "2.2.0"
+        versionCode = 33
+        versionName = "2.2.0-ru.1"
     }
 
     signingConfigs {
@@ -45,9 +45,8 @@ android {
 
     buildTypes {
         getByName("debug") {
-            // Side-by-side localization QA build; release package is unchanged.
-            applicationIdSuffix = ".ru"
-            versionNameSuffix = "-ru-test"
+            // Preserve the existing Russian package ID; debug builds use a different signer.
+            versionNameSuffix = "-test"
             ndk {
                 abiFilters += "arm64-v8a"
             }

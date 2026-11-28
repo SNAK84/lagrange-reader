@@ -696,4 +696,25 @@ class BookOrbitRepositoryHelpersTest {
         assertTrue(isNewerReleaseVersion("1.1.0", "v1.1.1"))
         assertFalse(isNewerReleaseVersion("1.1.0", "v1.1.0-beta"))
     }
+
+    @Test
+    fun `Russian releases compare revisions and reject upstream assets`() {
+        val tag = "v2.2.0-ru.2"
+        val asset = "Lagrange-2.2.0-ru.2.apk"
+        val url = "https://github.com/SNAK84/lagrange-reader/releases/download/$tag/$asset"
+        fun payload(download: String) = JSONObject()
+            .put("tag_name", tag)
+            .put("assets", JSONArray().put(JSONObject()
+                .put("name", asset).put("browser_download_url", download)))
+            .toString()
+        assertTrue(isNewerReleaseVersion("2.2.0-ru.1", tag))
+        assertTrue(isNewerReleaseVersion("2.2.0-ru.10", "v2.3.0-ru.1"))
+        assertFalse(isNewerReleaseVersion("2.2.0-ru.10", "v2.2.0-ru.2"))
+        assertEquals("2.2.0-ru.2", parseGitHubReleaseUpdate(payload(url), "2.2.0-ru.1")?.versionName)
+        assertEquals(url, parseGitHubReleaseUpdate(payload(url), "2.2.0-ru.1")?.apkDownloadUrl)
+        assertNull(parseGitHubReleaseUpdate(payload(url.replace("SNAK84", "van-geaux")), "2.2.0-ru.1")?.apkDownloadUrl)
+        assertNull(parseGitHubReleaseUpdate(JSONObject().put("tag_name", "v3.0.0").toString(), "2.2.0-ru.1"))
+        assertNull(parseGitHubReleaseUpdate(payload(url), "2.2.0-ru.1-test"))
+        assertNull(parseGitHubReleaseUpdate(payload(url), "2.2.0-ru.2"))
+    }
 }

@@ -40,7 +40,7 @@ internal class ReleaseApkInstaller(
             } == true
         } ?: throw IllegalArgumentException("No compatible APK is available for this release.")
         val fileName = update.apkFileName?.takeIf {
-            it.matches(Regex("Lagrange-[0-9]+\\.[0-9]+\\.[0-9]+\\.apk"))
+            it.matches(Regex("Lagrange-[0-9]+\\.[0-9]+\\.[0-9]+(?:-ru\\.[1-9][0-9]*)?\\.apk"))
         } ?: throw IllegalArgumentException("The release APK filename is invalid.")
         val updateDirectory = File(context.cacheDir, "update-apks")
         check(updateDirectory.exists() || updateDirectory.mkdirs()) {

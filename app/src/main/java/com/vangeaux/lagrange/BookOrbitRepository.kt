@@ -250,10 +250,10 @@ internal fun catalogImageResponseMayPersistCookies(
     trustLatch.credentialsRemainAllowed
 
 internal const val LAGRANGE_GITHUB_RELEASES_API_URL =
-    "https://api.github.com/repos/van-geaux/lagrange-reader/releases/latest"
+    "https://api.github.com/repos/SNAK84/lagrange-reader/releases/latest"
 
 private const val LAGRANGE_GITHUB_RELEASES_PAGE_URL =
-    "https://github.com/van-geaux/lagrange-reader/releases/tag/"
+    "https://github.com/SNAK84/lagrange-reader/releases/tag/"
 
 data class ReleaseUpdate(
     val versionName: String,
@@ -274,10 +274,14 @@ internal fun parseGitHubReleaseUpdate(
         ?: return null
     val remoteVersion = releaseVersionParts(tagName) ?: return null
     val localVersion = releaseVersionParts(currentVersion) ?: return null
+    if ((localVersion.ruRevision > 0) != (remoteVersion.ruRevision > 0)) return null
     if (remoteVersion <= localVersion) return null
 
     val htmlUrl = release.optString("html_url").trim()
-        .takeIf { it.startsWith("https://") || it.startsWith("http://") }
+        .takeIf { url ->
+            if (remoteVersion.ruRevision > 0) url == LAGRANGE_GITHUB_RELEASES_PAGE_URL + tagName
+            else url.startsWith("https://") || url.startsWith("http://")
+        }
         ?: LAGRANGE_GITHUB_RELEASES_PAGE_URL + tagName
     val apkAsset = release.optJSONArray("assets")?.let { assets ->
         val expectedName = "Lagrange-${remoteVersion.toDisplayString()}.apk"
@@ -289,7 +293,9 @@ internal fun parseGitHubReleaseUpdate(
                         runCatching { url.toHttpUrlOrNull() }.getOrNull()?.let { parsed ->
                             parsed.isHttps && parsed.host == "github.com" &&
                                 parsed.encodedPathSegments.contains("releases") &&
-                                parsed.encodedPathSegments.contains("download")
+                                parsed.encodedPathSegments.contains("download") &&
+                                (remoteVersion.ruRevision == 0 || parsed.encodedPathSegments ==
+                                    listOf("SNAK84", "lagrange-reader", "releases", "download", tagName, expectedName))
                         } == true
                     }
             }
@@ -312,24 +318,26 @@ internal fun isNewerReleaseVersion(currentVersion: String, candidateTag: String)
 }
 
 private fun releaseVersionParts(value: String): ReleaseVersion? {
-    val match = Regex("^[vV]?(\\d+)\\.(\\d+)\\.(\\d+)$").matchEntire(value.trim())
+    val match = Regex("^[vV]?(\\d+)\\.(\\d+)\\.(\\d+)(?:-ru\\.([1-9]\\d*))?$").matchEntire(value.trim())
         ?: return null
     return ReleaseVersion(
         major = match.groupValues[1].toIntOrNull() ?: return null,
         minor = match.groupValues[2].toIntOrNull() ?: return null,
-        patch = match.groupValues[3].toIntOrNull() ?: return null
+        patch = match.groupValues[3].toIntOrNull() ?: return null,
+        ruRevision = if (match.groupValues[4].isEmpty()) 0 else match.groupValues[4].toIntOrNull() ?: return null
     )
 }
 
 private data class ReleaseVersion(
     val major: Int,
     val minor: Int,
-    val patch: Int
+    val patch: Int,
+    val ruRevision: Int
 ) : Comparable<ReleaseVersion> {
     override fun compareTo(other: ReleaseVersion): Int =
-        compareValuesBy(this, other, ReleaseVersion::major, ReleaseVersion::minor, ReleaseVersion::patch)
+        compareValuesBy(this, other, ReleaseVersion::major, ReleaseVersion::minor, ReleaseVersion::patch, ReleaseVersion::ruRevision)
 
-    fun toDisplayString(): String = "$major.$minor.$patch"
+    fun toDisplayString(): String = "$major.$minor.$patch" + if (ruRevision > 0) "-ru.$ruRevision" else ""
 }
 
 internal class GitHubReleaseChecker(

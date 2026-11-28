@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lagrange</string>
+    <string name="app_name">Lagrange Reader RU</string>
     <string name="settings_category_permissions">Разрешения</string>
     <string name="settings_category_permissions_summary">Разрешения Android, используемые Lagrange</string>
     <string name="settings_permissions_summary">Разрешения Android, используемые Lagrange</string>
